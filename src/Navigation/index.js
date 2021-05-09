@@ -9,15 +9,16 @@ export default function App() {
   return (
     <Stack.Navigator>
        <Stack.Screen
-        name="Products"
-        options={{headerShown: false}}
-        component={Products}
-      />
-      <Stack.Screen
         name="NoConnected"
         options={{headerShown: false}}
         component={NoConnected}
       />
+       <Stack.Screen
+        name="Products"
+        options={{headerShown: false}}
+        component={Products}
+      />
+     
      
     </Stack.Navigator>
   );

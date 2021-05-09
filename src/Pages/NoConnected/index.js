@@ -1,11 +1,17 @@
 import React from 'react';
-import {View, Text, Image} from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  TouchableHighlight,
+  TouchableOpacity,
+} from 'react-native';
 import Header from '../../Components/Header';
 import SocialMedia from '../../Components/SocialMedia';
 import NoConnectedImage from '../../assets/images/noConnected.png';
 import styles from './style';
 
-const NoConnected = () => {
+const NoConnected = ({navigation}) => {
   return (
     <View style={styles.ScrollView}>
       <View>
@@ -13,11 +19,17 @@ const NoConnected = () => {
       </View>
       <View style={styles.containerNoConnected}>
         <View style={[styles.imageNoConnected]}>
-          <Image source={NoConnectedImage} />
+          <TouchableOpacity onPress={()=>navigation.navigate('Products' ,{})}>
+            <Image source={NoConnectedImage} />
+          </TouchableOpacity>
         </View>
         <View style={[styles.containerText]}>
-          <Text style={{color:"#42210B"}}>Sorry But we are closed at the moment</Text>
-          <Text style={{color:"#42210B"}}>you’ll be notified when we open</Text>
+          <Text style={{color: '#42210B'}}>
+            Sorry But we are closed at the moment
+          </Text>
+          <Text style={{color: '#42210B'}}>
+            you’ll be notified when we open
+          </Text>
         </View>
       </View>
       <View style={{alignItems: 'center'}}>
