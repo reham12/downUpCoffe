@@ -9,7 +9,7 @@ export default StyleSheet.create({
     paddingHorizontal: 15,
   },
   containerNoConnected: {
-    backgroundColor:"#C9E3E7",
+    backgroundColor:"#c9e3e7b3",
     borderRadius:18,
     justifyContent:"center",
     alignItems:"center",
